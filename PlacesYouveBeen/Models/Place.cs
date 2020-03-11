@@ -6,12 +6,16 @@ namespace PlacesBeen.Models
   public class Place
   {
     public string CityName { get; set; }
+    public int StayLength { get; set; }
+    public string JournalEntry { get; set; }
     private static List<Place> _instances = new List<Place>() {};
     public int Id { get; }
 
-    public Place(string cityName)
+    public Place(string cityName, int stayLength, string journalEntry)
     {
       CityName = cityName;
+      StayLength = Convert.ToInt32(stayLength);
+      JournalEntry = journalEntry;
       _instances.Add(this);
       Id = _instances.Count;
     }

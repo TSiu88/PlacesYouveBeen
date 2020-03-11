@@ -3,6 +3,16 @@
 }
 @using PlacesBeen.Models
 <h1>@Model.CityName</h1>
+<ul>
+  @if(@Model.StayLength != 0)
+  {
+    <li>Days Stayed: @Model.StayLength</li>
+  }
+  @if(@Model.JournalEntry != null)
+  {
+    <li>Journal Entry: @Model.JournalEntry</li>
+  }
+</ul>
 
 <div class="footer">
   <a href="/places">Return To Home</a>
