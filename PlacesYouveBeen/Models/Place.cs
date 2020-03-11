@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace ProjectName.Models
+namespace PlacesBeen.Models
 {
-  public class Item
+  public class Place
   {
     public string Property { get; set; }
     private static List<Item> _instances = new List<Item>() {};

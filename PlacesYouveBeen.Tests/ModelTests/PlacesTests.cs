@@ -1,11 +1,11 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProjectName.Models;
+using PlacesBeen.Models;
 using System;
 
-namespace ProjectName.Tests
+namespace PlacesBeen.Tests
 {
   [TestClass]
-  public class ItemTests
+  public class PlacesTests
   {
     // Test methods go here
     [TestMethod]
