@@ -23,11 +23,11 @@ namespace PlacesBeen.Controllers
       return RedirectToAction("Index"); 
     }
 
-    [HttpGet("/places/@Place.Id")]
+    [HttpGet("/places/{id}")]
     public ActionResult Show(int id) 
     { 
       Place foundPlace = Place.Find(id);
-      return View(); 
+      return View(foundPlace); 
     }
   }
 }
