@@ -5,15 +5,18 @@ namespace PlacesBeen.Models
 {
   public class Place
   {
-    public string Property { get; set; }
-    private static List<Item> _instances = new List<Item>() {};
-    public Item(string property)
+    public string CityName { get; set; }
+    private static List<Place> _instances = new List<Place>() {};
+    public int Id { get; }
+
+    public Place(string cityName)
     {
-      Property = property;
+      CityName = cityName;
       _instances.Add(this);
+      Id = _instances.Count;
     }
 
-    public static List<Item> GetAll()
+    public static List<Place> GetAll()
     {
       return _instances;
     }
@@ -21,6 +24,11 @@ namespace PlacesBeen.Models
     public static void ClearAll()
     {
       _instances.Clear();
+    }
+
+    public static Place Find(int searchId)
+    {
+      return _instances[searchId-1];
     }
   }
 }

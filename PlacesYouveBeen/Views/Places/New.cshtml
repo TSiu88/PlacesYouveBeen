@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+<h1>Enter a Place You've Been Here</h1>
+<form action="/places" method="post">
+  <div class="form-group">
+    <label for="cityName">City Name</label>
+    <input id="cityName" name="cityName" type="text" required>
+  </div>
+  <button type="submit">Add</button>
+</form>
+<div class="footer">
+  <a href="/places">Return to Home</a>
+</div>
